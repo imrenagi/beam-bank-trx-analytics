@@ -19,7 +19,7 @@ and so on.
 
 > Both mode mentioned above uses speculative aggregate trigger. This means
 in a designated period of time within a window, the application 
-will trigger a speculative aggregate from the data which have arrived on
+will trigger one or more speculative aggregates from the data which have arrived on
 to the system.
 
 ## Getting Started
@@ -28,3 +28,6 @@ to the system.
 * Run `mvn test` to execute the test.
 * To run the application, chose either `StreamingPipeline.java` or `BatchPipeline.java`.
 
+## References
+1. Apache Beam Game [Example](https://github.com/apache/beam/tree/master/examples)
+2. Apache Beam [Documentation](https://beam.apache.org/documentation/)  
