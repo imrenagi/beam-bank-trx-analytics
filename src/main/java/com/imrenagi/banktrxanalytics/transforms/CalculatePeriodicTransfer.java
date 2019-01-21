@@ -48,6 +48,6 @@ public class CalculatePeriodicTransfer extends PTransform<PCollection<TransferCr
 										)
 						).withAllowedLateness(this.allowedLatenessDuration)
 						.accumulatingFiredPanes() //accumulating all data
-				).apply(new ExtractTransfer());
+				).apply(new ExtractAndSumTransfer());
 	}
 }

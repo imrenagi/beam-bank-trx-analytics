@@ -32,6 +32,6 @@ public class CalculateTransfer extends PTransform<PCollection<TransferCreated>, 
                         ))
                         .accumulatingFiredPanes() // accumulating data
                         .withAllowedLateness(this.allowedLateness))
-                .apply(new ExtractTransfer());
+                .apply(new ExtractAndSumTransfer());
     }
 }

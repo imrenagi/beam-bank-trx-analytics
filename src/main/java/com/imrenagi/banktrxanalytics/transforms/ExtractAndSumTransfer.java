@@ -8,7 +8,7 @@ import org.apache.beam.sdk.values.KV;
 import org.apache.beam.sdk.values.PCollection;
 import org.apache.beam.sdk.values.TypeDescriptors;
 
-public class ExtractTransfer extends PTransform<PCollection<TransferCreated>, PCollection<KV<String, Long>>> {
+public class ExtractAndSumTransfer extends PTransform<PCollection<TransferCreated>, PCollection<KV<String, Long>>> {
 
     @Override
     public PCollection<KV<String, Long>> expand(PCollection<TransferCreated> input) {
