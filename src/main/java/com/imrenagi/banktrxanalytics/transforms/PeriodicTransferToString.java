@@ -9,12 +9,12 @@ import org.joda.time.format.DateTimeFormatter;
 
 public class PeriodicTransferToString extends DoFn<KV<String, Long>, String> {
 
-	DateTimeFormatter formatter = DateTimeFormat.forPattern("yyyy/MM/dd HH:mm:ss");
-
 	@ProcessElement
 	public void processElement(IntervalWindow window, ProcessContext context) {
 
 		KV<String, Long> kv = context.element();
+
+		DateTimeFormatter formatter = DateTimeFormat.forPattern("yyyy/MM/dd HH:mm:ss");
 
 		DateTime startDT = window.start().toDateTime();
 		DateTime endDT = window.end().toDateTime();
